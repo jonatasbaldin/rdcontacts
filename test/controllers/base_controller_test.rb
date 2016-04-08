@@ -12,4 +12,10 @@ class BaseControllerTest < ActionController::TestCase
     assert_select "title", @base_title + "Keep your contacts with us!"
   end
 
+  test "should get about" do
+    get :about
+    assert_response :success
+    assert_select "title", @base_title + "About"
+  end
+
 end

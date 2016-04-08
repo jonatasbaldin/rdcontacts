@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root             'base#index'
+  get  'about'     => 'base#about'
   get  'login'     => 'sessions#new'
   post 'login'     => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
