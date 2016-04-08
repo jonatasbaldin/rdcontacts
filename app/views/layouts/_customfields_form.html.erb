@@ -1,0 +1,23 @@
+<div class="center jumbotron">
+  <h1><%= @form_params[:head_title] %></h1>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+      <%= form_for @custom_field, url: @form_params[:form_path], method: @form_params[:form_method] do |form| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= form.label :name %>
+        <%= form.text_field :name, class: 'form-control' %>
+        
+        <p class="custom_field"><%= form.radio_button(:style, 'text') %>
+        <%= form.label(:style_text, "Text") %></p>
+        <p class="custom_field"><%= form.radio_button(:style, 'text_area') %>
+        <%= form.label(:style_text_area, "Text Area") %></p>
+        <p class="custom_field"><%= form.radio_button(:style, 'combo_box') %>
+        <%= form.label(:style_combo_box, "Combo Box") %></p>
+
+        <p><%= form.submit @form_params[:submit_message], class: "btn btn-lg btn-success" %></p>
+      <% end %>
+      </div>
+    </div>
+</div>

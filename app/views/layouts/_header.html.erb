@@ -1,0 +1,26 @@
+<header class="masthead">
+  <div class="container">
+    <nav>
+      <div class="navbar-header">
+        <% if session_is_logged? %>
+          <%= link_to "RD Contacts", user_contacts_path(session_logged_user) , class: "navbar-brand" %>
+        <% else %>
+          <%= link_to "RD Contacts", root_path, class: "navbar-brand" %>
+        <% end %>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <% if session_is_logged? %>
+          <li> <%= link_to "Contacts", user_contacts_path(session_logged_user)%> </li>
+          <li> <%= link_to "Custom Fields", user_custom_fields_path(session_logged_user)%> </li>
+          <li> <%= link_to "Profile", edit_user_path(session_logged_user)%> </li>
+          <li><%= link_to "About", "#" %></li>
+          <li> <%= link_to "Logout", logout_path, method: "delete" %> </li>
+        <% else %>
+          <li> <%= link_to "Login", login_path %> </li>
+          <li><%= link_to "Sign up", signup_path %></li>
+          <li><%= link_to "About", "#" %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

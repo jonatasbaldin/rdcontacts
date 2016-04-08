@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: MyString
+  contact_id: 
+  custom_field_id: 
+
+two:
+  data: MyString
+  contact_id: 
+  custom_field_id: 

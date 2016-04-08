@@ -1,0 +1,22 @@
+<% if @user %>
+  <% check = @user %>
+<% end %>
+
+<% if @contact %>
+  <% check = @contact %>
+<% end %>
+
+<% if @custom_field %>
+  <% check = @custom_field %>
+<% end %>
+
+<% if check.errors.any? %>
+  <div class="alert alert-danger">
+      <p>This form contains <%= pluralize(check.errors.count, "error") %></p>
+    <ul>
+      <% check.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

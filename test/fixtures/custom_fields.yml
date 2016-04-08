@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rdcustomfield:
+  name: RDCustomField
+  style: text
+  user_id: rduser.id
