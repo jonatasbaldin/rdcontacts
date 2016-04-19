@@ -1,5 +1,9 @@
 # RDContacts
 
+# THIS APPLICATION IS DEPRECATED #
+It will not be developed or follow its roadmap. It'll sit here as just Rails study material.
+If you want to take this project further, you're welcome!
+
 ## What is RDContacts?
 RDContacts is an opensource application that allow users to store its contacts. You can even create custom fields, but, for now, you cannot add custom information to contacts through the web interface, this feature is currently under development.
 
